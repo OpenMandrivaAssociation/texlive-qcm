@@ -62,6 +62,7 @@ for AUC-TeX.
 #- source
 %doc %{_texmfdistdir}/source/latex/qcm/qcm.dtx
 %doc %{_texmfdistdir}/source/latex/qcm/qcm.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -72,3 +73,5 @@ for AUC-TeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
