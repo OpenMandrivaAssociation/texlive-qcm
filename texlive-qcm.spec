@@ -6,7 +6,7 @@
 # catalog-version 2.1
 Name:		texlive-qcm
 Version:	2.1
-Release:	3
+Release:	4
 Summary:	A LaTeX2e class for making multiple choice questionnaires
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/qcm
