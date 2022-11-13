@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/qcm
-# catalog-date 2009-03-26 15:47:40 +0100
-# catalog-license lppl
-# catalog-version 2.1
 Name:		texlive-qcm
-Version:	2.1
-Release:	11
+Version:	63833
+Release:	1
 Summary:	A LaTeX2e class for making multiple choice questionnaires
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/qcm
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/qcm.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/qcm.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/qcm.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/qcm.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/qcm.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/qcm.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -34,12 +28,12 @@ typeset exam corrections automatically, and comes with support
 for AUC-TeX.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -55,24 +49,11 @@ for AUC-TeX.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.1-2
-+ Revision: 755563
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.1-1
-+ Revision: 719419
-- texlive-qcm
-- texlive-qcm
-- texlive-qcm
-- texlive-qcm
-
