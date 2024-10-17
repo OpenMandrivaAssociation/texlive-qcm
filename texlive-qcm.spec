@@ -3,7 +3,7 @@ Version:	63833
 Release:	2
 Summary:	A LaTeX2e class for making multiple choice questionnaires
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/qcm
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/qcm
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/qcm.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/qcm.doc.r%{version}.tar.xz
